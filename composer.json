@@ -1,0 +1,18 @@
+{
+    "name": "numiscorner/marketplace-bundle",
+    "description": "Private bundle to handle communication with marketplaces API",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laurent WILLEMS",
+            "email": "willems.laurent@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Numiscorner\\MarketplaceBundle\\": "src/"
+        }
+    },
+    "require": {}
+}
