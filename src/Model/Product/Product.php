@@ -5,6 +5,7 @@ namespace Numiscorner\MarketplaceBundle\Model\Product;
 
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Numiscorner\MarketplaceBundle\Model\Common\TranslatableProxy;
 
 class Product
@@ -117,7 +118,7 @@ class Product
     /**
      * @return TranslatableProxy[]
      */
-    public function getFeatures(): ?array
+    public function getFeatures(): Collection
     {
         return $this->features;
     }
@@ -135,7 +136,7 @@ class Product
     /**
      * @return TranslatableProxy[]
      */
-    public function getTranslations(): ?array
+    public function getTranslations(): Collection
     {
         return $this->translations;
     }
@@ -153,7 +154,7 @@ class Product
     /**
      * @return TranslatableProxy[]
      */
-    public function getCategories(): ?array
+    public function getCategories(): Collection
     {
         return $this->categories;
     }
