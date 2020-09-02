@@ -3,6 +3,8 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Common;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 class TranslatableProxy
 {
     /**
@@ -11,18 +13,23 @@ class TranslatableProxy
     protected $locale;
 
     /**
-     * @var KeyValueHolder[]
+     * @var ArrayCollection|KeyValueHolder[]
      */
     protected $keyValues = [];
 
-    public function __construct(string $locale)
+    public function __construct()
     {
-        $this->locale = $locale;
+        $this->keyValues = new ArrayCollection();
     }
 
-    public function addkeyValueHolder(KeyValueHolder $keyValueHolder)
+    public function addkeyValue(KeyValueHolder $keyValueHolder)
     {
-        $this->keyValues[] = $keyValueHolder;
+        $this->keyValues->add($keyValueHolder);
+    }
+
+    public function removeKeyValue(KeyValueHolder $keyValueHolder)
+    {
+        $this->keyValues->removeElement($keyValueHolder);
     }
 
     /**

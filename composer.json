@@ -14,5 +14,7 @@
             "Numiscorner\\MarketplaceBundle\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "doctrine/collections": "^1.6"
+    }
 }

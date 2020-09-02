@@ -4,6 +4,7 @@
 namespace Numiscorner\MarketplaceBundle\Model\Product;
 
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Numiscorner\MarketplaceBundle\Model\Common\TranslatableProxy;
 
 class Product
@@ -29,17 +30,17 @@ class Product
     protected $taxCode;
 
     /**
-     * @var TranslatableProxy[]
+     * @var ArrayCollection|TranslatableProxy[]
      */
     protected $features;
 
     /**
-     * @var TranslatableProxy[]
+     * @var ArrayCollection|TranslatableProxy[]
      */
     protected $translations;
 
     /**
-     * @var TranslatableProxy[]
+     * @var ArrayCollection|TranslatableProxy[]
      */
     protected $categories;
 
@@ -57,6 +58,13 @@ class Product
      * @var bool $featured
      */
     protected $featured;
+
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection();
+        $this->translations = new ArrayCollection();
+        $this->features = new ArrayCollection();
+    }
 
     /**
      * @return string
@@ -109,40 +117,55 @@ class Product
     /**
      * @return TranslatableProxy[]
      */
-    public function getFeatures()
+    public function getFeatures(): ?array
     {
         return $this->features;
     }
 
     public function addFeature(TranslatableProxy $translationProxy)
     {
-        $this->features[$translationProxy->getLocale()] = $translationProxy->getKeyValues();
+        $this->features->add($translationProxy);
+    }
+
+    public function removeFeature(TranslatableProxy $translatableProxy)
+    {
+        $this->features->removeElement($translatableProxy);
     }
 
     /**
      * @return TranslatableProxy[]
      */
-    public function getTranslations(): array
+    public function getTranslations(): ?array
     {
         return $this->translations;
     }
 
     public function addTranslation(TranslatableProxy $translationProxy)
     {
-        $this->translations[$translationProxy->getLocale()] = $translationProxy->getKeyValues();
+        $this->translations->add($translationProxy);
+    }
+
+    public function removeTranslation(TranslatableProxy $translatableProxy)
+    {
+        $this->translations->removeElement($translatableProxy);
     }
 
     /**
      * @return TranslatableProxy[]
      */
-    public function getCategories(): array
+    public function getCategories(): ?array
     {
         return $this->categories;
     }
 
     public function addCategory(TranslatableProxy $translationProxy)
     {
-        $this->categories[$translationProxy->getLocale()] = $translationProxy->getKeyValues();
+        $this->categories->add($translationProxy);
+    }
+
+    public function removeCategory(TranslatableProxy $translatableProxy)
+    {
+        $this->categories->removeElement($translatableProxy);
     }
 
     /**
