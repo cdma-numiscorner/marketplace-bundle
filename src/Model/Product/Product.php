@@ -60,6 +60,16 @@ class Product
      */
     protected $featured;
 
+    /**
+     * @var \DateTime $createdAt
+     */
+    protected $createdAt;
+
+    /**
+     * @var \DateTime|null $updatedAt
+     */
+    protected $updatedAt;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -231,5 +241,37 @@ class Product
     public function setWeight(?float $weight): void
     {
         $this->weight = $weight;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt(): ?\DateTime
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     */
+    public function setCreatedAt(\DateTime $createdAt): void
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return \DateTime|null
+     */
+    public function getUpdatedAt(): ?\DateTime
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime|null $updatedAt
+     */
+    public function setUpdatedAt(?\DateTime $updatedAt): void
+    {
+        $this->updatedAt = $updatedAt;
     }
 }
