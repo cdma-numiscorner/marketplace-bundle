@@ -6,6 +6,7 @@ namespace Numiscorner\MarketplaceBundle\Model\Product;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Numiscorner\MarketplaceBundle\Model\Common\KeyValueHolder;
 use Numiscorner\MarketplaceBundle\Model\Common\TranslatableProxy;
 
 class Product
@@ -70,11 +71,19 @@ class Product
      */
     protected $updatedAt;
 
+    /**
+     * Hold association on marketPlace by category
+     * 
+     * @var ArrayCollection|KeyValueHolder
+     */
+    protected $mappings;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
         $this->translations = new ArrayCollection();
         $this->features = new ArrayCollection();
+        $this->mappings = new ArrayCollection();
     }
 
     /**
@@ -273,5 +282,31 @@ class Product
     public function setUpdatedAt(?\DateTime $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * @return ArrayCollection|KeyValueHolder
+     */
+    public function getMappings()
+    {
+        return $this->mappings;
+    }
+
+    /**
+     * @param ArrayCollection|KeyValueHolder $mappings
+     */
+    public function setMappings($mappings): void
+    {
+        $this->mappings = $mappings;
+    }
+
+    public function addMapping(KeyValueHolder $mapping)
+    {
+        $this->mappings->add($mapping);
+    }
+
+    public function removeMapping(KeyValueHolder $mapping)
+    {
+        $this->mappings->removeElement($mapping);
     }
 }
