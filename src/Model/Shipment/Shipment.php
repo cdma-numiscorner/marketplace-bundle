@@ -9,6 +9,8 @@ use Numiscorner\MarketplaceBundle\Model\Product\Product;
 
 class Shipment
 {
+    /** @var string $orderReference */
+    protected $orderReference;
     /** @var string $carrierName */
     protected $carrierName;
     /** @var bool $notifyCustomer */
@@ -29,7 +31,7 @@ class Shipment
     /**
      * @return string
      */
-    public function getCarrierName(): string
+    public function getCarrierName(): ?string
     {
         return $this->carrierName;
     }
@@ -45,7 +47,7 @@ class Shipment
     /**
      * @return bool
      */
-    public function isNotifyCustomer(): bool
+    public function isNotifyCustomer(): ?bool
     {
         return $this->notifyCustomer;
     }
@@ -61,7 +63,7 @@ class Shipment
     /**
      * @return string
      */
-    public function getTrackingUrl(): string
+    public function getTrackingUrl(): ?string
     {
         return $this->trackingUrl;
     }
@@ -77,7 +79,7 @@ class Shipment
     /**
      * @return string
      */
-    public function getTrackingNumber(): string
+    public function getTrackingNumber(): ?string
     {
         return $this->trackingNumber;
     }
@@ -114,5 +116,21 @@ class Shipment
     public function removeProduct(Product $product)
     {
         $this->products->removeElement($product);
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderReference(): ?string
+    {
+        return $this->orderReference;
+    }
+
+    /**
+     * @param string $orderReference
+     */
+    public function setOrderReference(string $orderReference): void
+    {
+        $this->orderReference = $orderReference;
     }
 }
