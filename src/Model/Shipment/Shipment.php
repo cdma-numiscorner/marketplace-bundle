@@ -4,9 +4,6 @@
 namespace Numiscorner\MarketplaceBundle\Model\Shipment;
 
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Numiscorner\MarketplaceBundle\Model\Product\Product;
-
 class Shipment
 {
     /** @var string $orderReference */
@@ -19,13 +16,13 @@ class Shipment
     protected $trackingUrl;
     /** @var string $trackingNumber */
     protected $trackingNumber;
-    /** @var ArrayCollection|Product */
-    protected $products;
+    /** @var array $skus */
+    protected $skus;
 
     public function __construct()
     {
         $this->notifyCustomer = false;
-        $this->products = new ArrayCollection();
+        $this->skus = [];
     }
 
     /**
@@ -93,32 +90,6 @@ class Shipment
     }
 
     /**
-     * @return ArrayCollection|Product
-     */
-    public function getProducts()
-    {
-        return $this->products;
-    }
-
-    /**
-     * @param ArrayCollection|Product $products
-     */
-    public function setProducts($products): void
-    {
-        $this->products = $products;
-    }
-
-    public function addProduct(Product $product)
-    {
-        $this->products->add($product);
-    }
-
-    public function removeProduct(Product $product)
-    {
-        $this->products->removeElement($product);
-    }
-
-    /**
      * @return string
      */
     public function getOrderReference(): ?string
@@ -132,5 +103,26 @@ class Shipment
     public function setOrderReference(string $orderReference): void
     {
         $this->orderReference = $orderReference;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSkus(): array
+    {
+        return $this->skus;
+    }
+
+    /**
+     * @param array $skus
+     */
+    public function setSkus(array $skus): void
+    {
+        $this->skus = $skus;
+    }
+
+    public function addSku(string $sku)
+    {
+        $this->skus[] = $sku;
     }
 }
