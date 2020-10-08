@@ -84,6 +84,8 @@ class Product
         $this->translations = new ArrayCollection();
         $this->features = new ArrayCollection();
         $this->mappings = new ArrayCollection();
+        $this->images = [];
+        $this->setFeatured(false);
     }
 
     /**
@@ -191,7 +193,7 @@ class Product
     /**
      * @return string
      */
-    public function getTaxCode(): string
+    public function getTaxCode(): ?string
     {
         return $this->taxCode;
     }
