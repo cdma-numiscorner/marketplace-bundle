@@ -21,6 +21,9 @@ class Payment implements GenericModelInterface
     /** @var string */
     protected $orderStatus;
 
+    public const CREDIT = 'credit';
+    public const DEBIT = 'debit';
+
     /**
      * @return string
      */
