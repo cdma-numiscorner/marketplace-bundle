@@ -8,8 +8,9 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Numiscorner\MarketplaceBundle\Model\Common\KeyValueHolder;
 use Numiscorner\MarketplaceBundle\Model\Common\TranslatableProxy;
+use Numiscorner\MarketplaceBundle\Model\GenericModelInterface;
 
-class Product
+class Product implements GenericModelInterface
 {
     /**
      * @var string $reference

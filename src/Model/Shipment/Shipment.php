@@ -4,7 +4,9 @@
 namespace Numiscorner\MarketplaceBundle\Model\Shipment;
 
 
-class Shipment
+use Numiscorner\MarketplaceBundle\Model\GenericModelInterface;
+
+class Shipment implements GenericModelInterface
 {
     /** @var string $orderReference */
     protected $orderReference;
