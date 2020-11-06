@@ -3,7 +3,6 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Product;
 
-
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Numiscorner\MarketplaceBundle\Model\Common\KeyValueHolder;
@@ -74,7 +73,7 @@ class Product implements GenericModelInterface
 
     /**
      * Hold association on marketPlace by category
-     * 
+     *
      * @var ArrayCollection|KeyValueHolder
      */
     protected $mappings;

@@ -3,7 +3,6 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Common;
 
-
 class KeyValueHolder
 {
     /**

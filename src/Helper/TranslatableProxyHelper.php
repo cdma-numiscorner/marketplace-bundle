@@ -3,7 +3,6 @@
 
 namespace Numiscorner\MarketplaceBundle\Helper;
 
-
 use Doctrine\Common\Collections\ArrayCollection;
 use Numiscorner\MarketplaceBundle\Model\Common\TranslatableProxy;
 
@@ -11,7 +10,7 @@ class TranslatableProxyHelper
 {
     /**
      * Get a TranslatableProxy by locale
-     * 
+     *
      * @param ArrayCollection|TranslatableProxy[] $translations
      * @param string $locale
      *

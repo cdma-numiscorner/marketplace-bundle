@@ -3,7 +3,6 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Shipment;
 
-
 use Numiscorner\MarketplaceBundle\Model\GenericModelInterface;
 
 class Shipment implements GenericModelInterface

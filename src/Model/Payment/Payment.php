@@ -3,7 +3,6 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Payment;
 
-
 use Numiscorner\MarketplaceBundle\Model\GenericModelInterface;
 
 class Payment implements GenericModelInterface

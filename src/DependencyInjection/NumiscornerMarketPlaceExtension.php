@@ -3,7 +3,6 @@
 
 namespace Numiscorner\MarketplaceBundle\DependencyInjection;
 
-
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 
@@ -19,5 +18,4 @@ class NumiscornerMarketPlaceExtension extends Extension
     {
         return 'numiscorner_marketplace';
     }
-
 }
