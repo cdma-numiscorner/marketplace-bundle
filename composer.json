@@ -16,6 +16,7 @@
     },
     "require": {
         "doctrine/collections": "^1.6",
-      "ext-json": "*"
+      "ext-json": "*",
+        "symfony/validator": "^5.1"
     }
 }

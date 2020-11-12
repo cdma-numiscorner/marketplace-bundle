@@ -2,12 +2,21 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Order;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class LineItem
 {
-
-
-    /* @var string */
+    /**
+     * @Assert\NotBlank()
+     * @var string
+     */
     protected $title;
+
+    /**
+     * @Assert\NotBlank()
+     * @var string
+     */
+    protected $sku;
 
     /* @var string */
     protected $productTitle;
@@ -21,10 +30,20 @@ class LineItem
     /* @var array */
     protected $properties;
 
-    /* @var int */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Range(min="1")
+     *
+     * @var int
+     */
     protected $quantity;
 
-    /* @var int */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Type("float")
+     *
+     * @var int
+     */
     protected $price;
 
     /* @var bool */
@@ -62,6 +81,22 @@ class LineItem
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSku()
+    {
+        return $this->sku;
+    }
+
+    /**
+     * @param string $sku
+     */
+    public function setSku($sku)
+    {
+        $this->sku = $sku;
     }
 
     /**

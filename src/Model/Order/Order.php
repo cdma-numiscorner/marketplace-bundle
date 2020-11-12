@@ -2,12 +2,10 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Order;
 
-use Illuminate\Support\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class Order
 {
-
-
     /** @var int */
     protected $id;
 
@@ -32,19 +30,33 @@ class Order
     /** @var bool */
     protected $confirmed;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\DateTime()
+     * @var string
+     */
     protected $createdAt;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Currency()
+     * @var string
+     */
     protected $currency;
 
     /** @var int */
     protected $deviceId;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @var string
+     */
     protected $email;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @var string
+     */
     protected $financialStatus;
 
     /** @var string */
@@ -101,7 +113,12 @@ class Order
     /** @var float */
     protected $totalLineItemsPrice;
 
-    /** @var float */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Type("float")
+     *
+     * @var float
+     */
     protected $totalPrice;
 
     /** @var float */
@@ -125,7 +142,10 @@ class Order
     /** @var string */
     protected $landingSiteRef;
 
-    /** @var int */
+    /**
+     * @Assert\NotBlank()
+     * @var string
+     */
     protected $orderNumber;
 
     /** @var array */
@@ -161,31 +181,43 @@ class Order
     /** @var mixed */
     protected $tax;
 
-    /** @var Collection */
+    /**
+     * @Assert\Collection()
+     * @Assert\Count(min="1")
+     *
+     * @var LineItem[]
+     */
     protected $lineItems;
 
     /** @var array */
     protected $shippingLines;
 
-    /** @var object */
+    /**
+     * @Assert\Valid()
+     * @Assert\NotBlank()
+     *
+     * @var CustomerAddress
+     */
     protected $billingAddress;
 
-    /** @var object */
+    /**
+     * @Assert\Valid()
+     * @Assert\NotBlank()
+     * @var CustomerAddress
+     */
     protected $shippingAddress;
 
     /** @var array */
     protected $fulfillments;
 
-    /** @var object */
-    protected $clientDetails;
-
     /** @var array */
     protected $refunds;
 
-    /** @var object */
-    protected $paymentDetails;
-
-    /** @var object */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Valid()
+     * @var Customer
+     */
     protected $customer;
 
     /** @var string */
@@ -506,7 +538,7 @@ class Order
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getOrderNumber()
     {
@@ -626,27 +658,11 @@ class Order
     }
 
     /**
-     * @return object
-     */
-    public function getClientDetails()
-    {
-        return $this->clientDetails;
-    }
-
-    /**
      * @return array
      */
     public function getRefunds()
     {
         return $this->refunds;
-    }
-
-    /**
-     * @return object
-     */
-    public function getPaymentDetails()
-    {
-        return $this->paymentDetails;
     }
 
     /**
@@ -1154,27 +1170,11 @@ class Order
     }
 
     /**
-     * @param object $clientDetails
-     */
-    public function setClientDetails($clientDetails)
-    {
-        $this->clientDetails = $clientDetails;
-    }
-
-    /**
      * @param array $refunds
      */
     public function setRefunds($refunds)
     {
         $this->refunds = $refunds;
-    }
-
-    /**
-     * @param object $paymentDetails
-     */
-    public function setPaymentDetails($paymentDetails)
-    {
-        $this->paymentDetails = $paymentDetails;
     }
 
     /**
