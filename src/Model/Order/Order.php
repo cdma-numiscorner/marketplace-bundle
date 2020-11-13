@@ -13,27 +13,17 @@ class Order
     /** @var bool */
     protected $buyerAcceptsMarketing;
 
-    /** @var string */
-    protected $cancelReason;
-
-    /** @var string */
-    protected $cancelledAt;
-
-    /** @var string */
-    protected $cartToken;
-
-    /** @var string */
-    protected $checkoutToken;
-
-    /** @var string */
-    protected $closedAt;
-
-    /** @var bool */
-    protected $confirmed;
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var string
+     */
+    protected $marketCode;
 
     /**
      * @Assert\NotBlank()
      * @Assert\DateTime()
+     *
      * @var string
      */
     protected $createdAt;
@@ -45,9 +35,6 @@ class Order
      * @var string
      */
     protected $currency;
-
-    /** @var int */
-    protected $deviceId;
 
     /**
      * @Assert\NotBlank()
@@ -65,37 +52,10 @@ class Order
     protected $gateway;
 
     /** @var string */
-    protected $landingSite;
-
-    /** @var int */
-    protected $locationId;
-
-    /** @var string */
     protected $name;
 
     /** @var string */
-    protected $referringSite;
-
-    /** @var string */
     protected $note;
-
-    /** @var int */
-    protected $number;
-
-    /** @var string */
-    protected $processedAt;
-
-    /** @var string */
-    protected $reference;
-
-    /** @var string */
-    protected $referencingSite;
-
-    /** @var string */
-    protected $sourceIdentifier;
-
-    /** @var string */
-    protected $sourceUrl;
 
     /**
      * @Assert\NotBlank()
@@ -107,12 +67,6 @@ class Order
 
     /** @var bool */
     protected $taxesIncluded;
-
-    /** @var bool */
-    protected $test;
-
-    /** @var string */
-    protected $token;
 
     /**
      * @Assert\NotBlank()
@@ -138,9 +92,6 @@ class Order
      */
     protected $totalPrice;
 
-    /** @var float */
-    protected $totalPriceUsd;
-
     /**
      * @Assert\NotBlank()
      * @Assert\Type("float")
@@ -155,15 +106,6 @@ class Order
     /** @var string */
     protected $updatedAt;
 
-    /** @var int */
-    protected $userId;
-
-    /** @var string */
-    protected $browserIp;
-
-    /** @var string */
-    protected $landingSiteRef;
-
     /**
      * @Assert\NotBlank()
      * @var string
@@ -171,31 +113,7 @@ class Order
     protected $orderNumber;
 
     /** @var array */
-    protected $paymentGatewayNames;
-
-    /** @var string */
-    protected $processingMethod;
-
-    /** @var string */
-    protected $source;
-
-    /** @var int */
-    protected $checkoutId;
-
-    /** @var string */
-    protected $sourceName;
-
-    /** @var string */
-    protected $fulfillmentStatus;
-
-    /** @var string */
-    protected $tags;
-
-    /** @var array */
     protected $discountCodes;
-
-    /** @var array */
-    protected $noteAttributes;
 
     /** @var array */
     protected $taxLines;
@@ -229,12 +147,6 @@ class Order
      */
     protected $shippingAddress;
 
-    /** @var array */
-    protected $fulfillments;
-
-    /** @var array */
-    protected $refunds;
-
     /**
      * @Assert\NotBlank()
      * @Assert\Valid()
@@ -251,18 +163,6 @@ class Order
 
     /** @var string */
     protected $transactions;
-
-    /** @var bool */
-    protected $sendWebhooks;
-
-    /** @var bool */
-    protected $sendReceipt;
-
-    /** @var string */
-    protected $inventoryBehaviour;
-
-    /** @var bool */
-    protected $sendFulfillmentReceipt;
 
     /**
      * @return int
@@ -1217,35 +1117,11 @@ class Order
     }
 
     /**
-     * @param string $orderStatusUrl
-     */
-    public function setOrderStatusUrl($orderStatusUrl)
-    {
-        $this->orderStatusUrl = $orderStatusUrl;
-    }
-
-    /**
      * @param array $transactions
      */
     public function setTransactions($transactions)
     {
         $this->transactions = $transactions;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getSendWebhooks()
-    {
-        return $this->sendWebhooks;
-    }
-
-    /**
-     * @param bool $sendWebhooks
-     */
-    public function setSendWebhooks($sendWebhooks)
-    {
-        $this->sendWebhooks = $sendWebhooks;
     }
 
     /**
@@ -1267,32 +1143,16 @@ class Order
     /**
      * @return string
      */
-    public function getInventoryBehaviour()
+    public function getMarketCode()
     {
-        return $this->inventoryBehaviour;
+        return $this->marketCode;
     }
 
     /**
-     * @param string $inventoryBehaviour
+     * @param string $marketCode
      */
-    public function setInventoryBehaviour($inventoryBehaviour)
+    public function setMarketCode($marketCode)
     {
-        $this->inventoryBehaviour = $inventoryBehaviour;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getSendFulfillmentReceipt()
-    {
-        return $this->sendFulfillmentReceipt;
-    }
-
-    /**
-     * @param bool $sendFulfillmentReceipt
-     */
-    public function setSendFulfillmentReceipt($sendFulfillmentReceipt)
-    {
-        $this->sendFulfillmentReceipt = $sendFulfillmentReceipt;
+        $this->marketCode = $marketCode;
     }
 }
