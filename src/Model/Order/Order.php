@@ -156,12 +156,6 @@ class Order
     protected $customer;
 
     /** @var string */
-    protected $contactEmail;
-
-    /** @var string */
-    protected $orderStatusUrl;
-
-    /** @var string */
     protected $transactions;
 
     /**
@@ -181,966 +175,6 @@ class Order
     }
 
     /**
-     * @return bool
-     */
-    public function getBuyerAcceptsMarketing()
-    {
-        return $this->buyerAcceptsMarketing;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCancelReason()
-    {
-        return $this->cancelReason;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCancelledAt()
-    {
-        return $this->cancelledAt;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCartToken()
-    {
-        return $this->cartToken;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCheckoutToken()
-    {
-        return $this->checkoutToken;
-    }
-
-    /**
-     * @return string
-     */
-    public function getClosedAt()
-    {
-        return $this->closedAt;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getConfirmed()
-    {
-        return $this->confirmed;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCurrency()
-    {
-        return $this->currency;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDeviceId()
-    {
-        return $this->deviceId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFinancialStatus()
-    {
-        return $this->financialStatus;
-    }
-
-    /**
-     * @return string
-     */
-    public function getGateway()
-    {
-        return $this->gateway;
-    }
-
-    /**
-     * @return string
-     */
-    public function getlandingSite()
-    {
-        return $this->landingSite;
-    }
-
-    /**
-     * @return int
-     */
-    public function getLocationId()
-    {
-        return $this->locationId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getProcessedAt()
-    {
-        return $this->processedAt;
-    }
-
-    /**
-     * @return string
-     */
-    public function getReference()
-    {
-        return $this->reference;
-    }
-
-    /**
-     * @return string
-     */
-    public function getReferringSite()
-    {
-        return $this->referencingSite;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSourceIdentifier()
-    {
-        return $this->sourceIdentifier;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSourceUrl()
-    {
-        return $this->sourceUrl;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSubtotalPrice()
-    {
-        return $this->subtotalPrice;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getTaxesIncluded()
-    {
-        return $this->taxesIncluded;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getTest()
-    {
-        return $this->test;
-    }
-
-    /**
-     * @return string
-     */
-    public function getToken()
-    {
-        return $this->token;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalDiscounts()
-    {
-        return $this->totalDiscounts;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalLineItemsPrice()
-    {
-        return $this->totalLineItemsPrice;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalPrice()
-    {
-        return $this->totalPrice;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalPriceUsd()
-    {
-        return $this->totalPriceUsd;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalTax()
-    {
-        return $this->totalTax;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTotalWeight()
-    {
-        return $this->totalWeight;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
-    }
-
-    /**
-     * @return int
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getBrowserIp()
-    {
-        return $this->browserIp;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLandingSiteRef()
-    {
-        return $this->landingSiteRef;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOrderNumber()
-    {
-        return $this->orderNumber;
-    }
-
-    /**
-     * @return string
-     */
-    public function getProcessingMethod()
-    {
-        return $this->processingMethod;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSource()
-    {
-        return $this->source;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCheckoutId()
-    {
-        return $this->checkoutId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSourceName()
-    {
-        return $this->sourceName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFulfillmentStatus()
-    {
-        return $this->fulfillmentStatus;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTax()
-    {
-        return $this->tax;
-    }
-
-    /**
-     * @return array
-     */
-    public function getDiscountCodes()
-    {
-        return $this->discountCodes;
-    }
-
-    /**
-     * @return array
-     */
-    public function getNoteAttributes()
-    {
-        return $this->noteAttributes;
-    }
-
-    /**
-     * @return array
-     */
-    public function getTaxLines()
-    {
-        return $this->taxLines;
-    }
-
-    /**
-     * @return Collection
-     */
-    public function getLineItems()
-    {
-        return $this->lineItems;
-    }
-
-    /**
-     * @return array
-     */
-    public function getShippingLines()
-    {
-        return $this->shippingLines;
-    }
-
-    /**
-     * @return object
-     */
-    public function getBillingAddress()
-    {
-        return $this->billingAddress;
-    }
-
-    /**
-     * @return object
-     */
-    public function getShippingAddress()
-    {
-        return $this->shippingAddress;
-    }
-
-    /**
-     * @return array
-     */
-    public function getFulfillments()
-    {
-        return $this->fulfillments;
-    }
-
-    /**
-     * @return array
-     */
-    public function getRefunds()
-    {
-        return $this->refunds;
-    }
-
-    /**
-     * @return object
-     */
-    public function getCustomer()
-    {
-        return $this->customer;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNote()
-    {
-        return $this->note;
-    }
-
-    /**
-     * @return int
-     */
-    public function getNumber()
-    {
-        return $this->number;
-    }
-
-    /**
-     * @return string
-     */
-    public function getReferencingSite()
-    {
-        return $this->referencingSite;
-    }
-
-    /**
-     * @return array
-     */
-    public function getPaymentGatewayNames()
-    {
-        return $this->paymentGatewayNames;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTags()
-    {
-        return $this->tags;
-    }
-
-    /**
-     * @return string
-     */
-    public function getContactEmail()
-    {
-        return $this->contactEmail;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOrderStatusUrl()
-    {
-        return $this->orderStatusUrl;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTransactions()
-    {
-        return $this->transactions;
-    }
-
-    /**
-     * @param bool $buyerAcceptsMarketing
-     */
-    public function setBuyerAcceptsMarketing($buyerAcceptsMarketing)
-    {
-        $this->buyerAcceptsMarketing = $buyerAcceptsMarketing;
-    }
-
-    /**
-     * @param string $cancelReason
-     */
-    public function setCancelReason($cancelReason)
-    {
-        $this->cancelReason = $cancelReason;
-    }
-
-    /**
-     * @param string $cancelledAt
-     */
-    public function setCancelledAt($cancelledAt)
-    {
-        $this->cancelledAt = $cancelledAt;
-    }
-
-    /**
-     * @param string $cartToken
-     */
-    public function setCartToken($cartToken)
-    {
-        $this->cartToken = $cartToken;
-    }
-
-    /**
-     * @param string $checkoutToken
-     */
-    public function setCheckoutToken($checkoutToken)
-    {
-        $this->checkoutToken = $checkoutToken;
-    }
-
-    /**
-     * @param string $closedAt
-     */
-    public function setClosedAt($closedAt)
-    {
-        $this->closedAt = $closedAt;
-    }
-
-    /**
-     * @param bool $confirmed
-     */
-    public function setConfirmed($confirmed)
-    {
-        $this->confirmed = $confirmed;
-    }
-
-    /**
-     * @param string $createdAt
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->createdAt = $createdAt;
-    }
-
-    /**
-     * @param string $currency
-     */
-    public function setCurrency($currency)
-    {
-        $this->currency = $currency;
-    }
-
-    /**
-     * @param int $deviceId
-     */
-    public function setDeviceId($deviceId)
-    {
-        $this->deviceId = $deviceId;
-    }
-
-    /**
-     * @param string $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
-
-    /**
-     * @param string $gateway
-     */
-    public function setGateway($gateway)
-    {
-        $this->gateway = $gateway;
-    }
-
-    /**
-     * @param string $landingSite
-     */
-    public function setLandingSite($landingSite)
-    {
-        $this->landingSite = $landingSite;
-    }
-
-    /**
-     * @param int $locationId
-     */
-    public function setLocationId($locationId)
-    {
-        $this->locationId = $locationId;
-    }
-
-    /**
-     * @param string $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @param string $referringSite
-     */
-    public function setReferringSite($referringSite)
-    {
-        $this->referringSite = $referringSite;
-    }
-
-    /**
-     * @param string $note
-     */
-    public function setNote($note)
-    {
-        $this->note = $note;
-    }
-
-    /**
-     * @param int $number
-     */
-    public function setNumber($number)
-    {
-        $this->number = $number;
-    }
-
-    /**
-     * @param string $processedAt
-     */
-    public function setProcessedAt($processedAt)
-    {
-        $this->processedAt = $processedAt;
-    }
-
-    /**
-     * @param string $reference
-     */
-    public function setReference($reference)
-    {
-        $this->reference = $reference;
-    }
-
-    /**
-     * @param string $referencingSite
-     */
-    public function setReferencingSite($referencingSite)
-    {
-        $this->referencingSite = $referencingSite;
-    }
-
-    /**
-     * @param string $sourceIdentifier
-     */
-    public function setSourceIdentifier($sourceIdentifier)
-    {
-        $this->sourceIdentifier = $sourceIdentifier;
-    }
-
-    /**
-     * @param string $sourceUrl
-     */
-    public function setSourceUrl($sourceUrl)
-    {
-        $this->sourceUrl = $sourceUrl;
-    }
-
-    /**
-     * @param string $subtotalPrice
-     */
-    public function setSubtotalPrice($subtotalPrice)
-    {
-        $this->subtotalPrice = $subtotalPrice;
-    }
-
-    /**
-     * @param bool $taxesIncluded
-     */
-    public function setTaxesIncluded($taxesIncluded)
-    {
-        $this->taxesIncluded = $taxesIncluded;
-    }
-
-    /**
-     * @param bool $test
-     */
-    public function setTest($test)
-    {
-        $this->test = $test;
-    }
-
-    /**
-     * @param string $token
-     */
-    public function setToken($token)
-    {
-        $this->token = $token;
-    }
-
-    /**
-     * @param float $totalDiscounts
-     */
-    public function setTotalDiscounts($totalDiscounts)
-    {
-        $this->totalDiscounts = $totalDiscounts;
-    }
-
-    /**
-     * @param float $totalLineItemsPrice
-     */
-    public function setTotalLineItemsPrice($totalLineItemsPrice)
-    {
-        $this->totalLineItemsPrice = $totalLineItemsPrice;
-    }
-
-    /**
-     * @param float $totalPrice
-     */
-    public function setTotalPrice($totalPrice)
-    {
-        $this->totalPrice = $totalPrice;
-    }
-
-    /**
-     * @param float $totalPriceUsd
-     */
-    public function setTotalPriceUsd($totalPriceUsd)
-    {
-        $this->totalPriceUsd = $totalPriceUsd;
-    }
-
-    /**
-     * @param float $totalTax
-     */
-    public function setTotalTax($totalTax)
-    {
-        $this->totalTax = $totalTax;
-    }
-
-    /**
-     * @param int $totalWeight
-     */
-    public function setTotalWeight($totalWeight)
-    {
-        $this->totalWeight = $totalWeight;
-    }
-
-    /**
-     * @param string $updatedAt
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-    }
-
-    /**
-     * @param int $userId
-     */
-    public function setUserId($userId)
-    {
-        $this->userId = $userId;
-    }
-
-    /**
-     * @param string $browserIp
-     */
-    public function setBrowserIp($browserIp)
-    {
-        $this->browserIp = $browserIp;
-    }
-
-    /**
-     * @param string $landingSiteRef
-     */
-    public function setLandingSiteRef($landingSiteRef)
-    {
-        $this->landingSiteRef = $landingSiteRef;
-    }
-
-    /**
-     * @param int $orderNumber
-     */
-    public function setOrderNumber($orderNumber)
-    {
-        $this->orderNumber = $orderNumber;
-    }
-
-    /**
-     * @param array $paymentGatewayNames
-     */
-    public function setPaymentGatewayNames($paymentGatewayNames)
-    {
-        $this->paymentGatewayNames = $paymentGatewayNames;
-    }
-
-    /**
-     * @param string $processingMethod
-     */
-    public function setProcessingMethod($processingMethod)
-    {
-        $this->processingMethod = $processingMethod;
-    }
-
-    /**
-     * @param string $source
-     */
-    public function setSource($source)
-    {
-        $this->source = $source;
-    }
-
-    /**
-     * @param int $checkoutId
-     */
-    public function setCheckoutId($checkoutId)
-    {
-        $this->checkoutId = $checkoutId;
-    }
-
-    /**
-     * @param string $sourceName
-     */
-    public function setSourceName($sourceName)
-    {
-        $this->sourceName = $sourceName;
-    }
-
-    /**
-     * @param string $tags
-     */
-    public function setTags($tags)
-    {
-        $this->tags = $tags;
-    }
-
-    /**
-     * @param array $discountCodes
-     */
-    public function setDiscountCodes($discountCodes)
-    {
-        $this->discountCodes = $discountCodes;
-    }
-
-    /**
-     * @param object $noteAttributes
-     */
-    public function setNoteAttributes($noteAttributes)
-    {
-        $this->noteAttributes = $noteAttributes;
-    }
-
-    /**
-     * @param array $taxLines
-     */
-    public function setTaxLines($taxLines)
-    {
-        $this->taxLines = $taxLines;
-    }
-
-    /**
-     * @param Collection $lineItems
-     */
-    public function setLineItems($lineItems)
-    {
-        $this->lineItems = $lineItems;
-    }
-
-    /**
-     * @param array $shippingLines
-     */
-    public function setShippingLines($shippingLines)
-    {
-        $this->shippingLines = $shippingLines;
-    }
-
-    /**
-     * @param object $billingAddress
-     */
-    public function setBillingAddress($billingAddress)
-    {
-        $this->billingAddress = $billingAddress;
-    }
-
-    /**
-     * @param object $shippingAddress
-     */
-    public function setShippingAddress($shippingAddress)
-    {
-        $this->shippingAddress = $shippingAddress;
-    }
-
-    /**
-     * @param array $fulfillments
-     */
-    public function setFulfillments($fulfillments)
-    {
-        $this->fulfillments = $fulfillments;
-    }
-
-    /**
-     * @param $status
-     */
-    public function setFulfillmentStatus($status)
-    {
-        $this->fulfillmentStatus = $status;
-    }
-
-    /**
-     * @param string $financialStatus
-     */
-    public function setFinancialStatus($financialStatus)
-    {
-        $this->financialStatus = $financialStatus;
-    }
-
-    /**
-     * @param array $refunds
-     */
-    public function setRefunds($refunds)
-    {
-        $this->refunds = $refunds;
-    }
-
-    /**
-     * @param object $customer
-     */
-    public function setCustomer($customer)
-    {
-        $this->customer = $customer;
-    }
-
-    /**
-     * @param string $contactEmail
-     */
-    public function setContactEmail($contactEmail)
-    {
-        $this->contactEmail = $contactEmail;
-    }
-
-    /**
-     * @param array $transactions
-     */
-    public function setTransactions($transactions)
-    {
-        $this->transactions = $transactions;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getSendReceipt()
-    {
-        return $this->sendReceipt;
-    }
-
-    /**
-     * @param bool $sendReceipt
-     */
-    public function setSendReceipt($sendReceipt)
-    {
-        $this->sendReceipt = $sendReceipt;
-    }
-
-    /**
      * @return string
      */
     public function getMarketCode()
@@ -1155,4 +189,358 @@ class Order
     {
         $this->marketCode = $marketCode;
     }
+
+    /**
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param string $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+
+    /**
+     * @param string $currency
+     */
+    public function setCurrency($currency)
+    {
+        $this->currency = $currency;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFinancialStatus()
+    {
+        return $this->financialStatus;
+    }
+
+    /**
+     * @param string $financialStatus
+     */
+    public function setFinancialStatus($financialStatus)
+    {
+        $this->financialStatus = $financialStatus;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGateway()
+    {
+        return $this->gateway;
+    }
+
+    /**
+     * @param string $gateway
+     */
+    public function setGateway($gateway)
+    {
+        $this->gateway = $gateway;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    /**
+     * @param string $note
+     */
+    public function setNote($note)
+    {
+        $this->note = $note;
+    }
+
+    /**
+     * @return float
+     */
+    public function getSubtotalPrice()
+    {
+        return $this->subtotalPrice;
+    }
+
+    /**
+     * @param float $subtotalPrice
+     */
+    public function setSubtotalPrice($subtotalPrice)
+    {
+        $this->subtotalPrice = $subtotalPrice;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isTaxesIncluded()
+    {
+        return $this->taxesIncluded;
+    }
+
+    /**
+     * @param bool $taxesIncluded
+     */
+    public function setTaxesIncluded($taxesIncluded)
+    {
+        $this->taxesIncluded = $taxesIncluded;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTotalDiscounts()
+    {
+        return $this->totalDiscounts;
+    }
+
+    /**
+     * @param float $totalDiscounts
+     */
+    public function setTotalDiscounts($totalDiscounts)
+    {
+        $this->totalDiscounts = $totalDiscounts;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTotalLineItemsPrice()
+    {
+        return $this->totalLineItemsPrice;
+    }
+
+    /**
+     * @param float $totalLineItemsPrice
+     */
+    public function setTotalLineItemsPrice($totalLineItemsPrice)
+    {
+        $this->totalLineItemsPrice = $totalLineItemsPrice;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTotalPrice()
+    {
+        return $this->totalPrice;
+    }
+
+    /**
+     * @param float $totalPrice
+     */
+    public function setTotalPrice($totalPrice)
+    {
+        $this->totalPrice = $totalPrice;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTotalTax()
+    {
+        return $this->totalTax;
+    }
+
+    /**
+     * @param float $totalTax
+     */
+    public function setTotalTax($totalTax)
+    {
+        $this->totalTax = $totalTax;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTotalWeight()
+    {
+        return $this->totalWeight;
+    }
+
+    /**
+     * @param int $totalWeight
+     */
+    public function setTotalWeight($totalWeight)
+    {
+        $this->totalWeight = $totalWeight;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param string $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderNumber()
+    {
+        return $this->orderNumber;
+    }
+
+    /**
+     * @param string $orderNumber
+     */
+    public function setOrderNumber($orderNumber)
+    {
+        $this->orderNumber = $orderNumber;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDiscountCodes()
+    {
+        return $this->discountCodes;
+    }
+
+    /**
+     * @param array $discountCodes
+     */
+    public function setDiscountCodes($discountCodes)
+    {
+        $this->discountCodes = $discountCodes;
+    }
+
+    /**
+     * @return LineItem[]
+     */
+    public function getLineItems()
+    {
+        return $this->lineItems;
+    }
+
+    /**
+     * @param LineItem[] $lineItems
+     */
+    public function setLineItems($lineItems)
+    {
+        $this->lineItems = $lineItems;
+    }
+
+    /**
+     * @return Item[]
+     */
+    public function getShippingLines()
+    {
+        return $this->shippingLines;
+    }
+
+    /**
+     * @param Item[] $shippingLines
+     */
+    public function setShippingLines($shippingLines)
+    {
+        $this->shippingLines = $shippingLines;
+    }
+
+    /**
+     * @return CustomerAddress
+     */
+    public function getBillingAddress()
+    {
+        return $this->billingAddress;
+    }
+
+    /**
+     * @param CustomerAddress $billingAddress
+     */
+    public function setBillingAddress($billingAddress)
+    {
+        $this->billingAddress = $billingAddress;
+    }
+
+    /**
+     * @return CustomerAddress
+     */
+    public function getShippingAddress()
+    {
+        return $this->shippingAddress;
+    }
+
+    /**
+     * @param CustomerAddress $shippingAddress
+     */
+    public function setShippingAddress($shippingAddress)
+    {
+        $this->shippingAddress = $shippingAddress;
+    }
+
+    /**
+     * @return Customer
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
+    }
+
+    /**
+     * @param Customer $customer
+     */
+    public function setCustomer($customer)
+    {
+        $this->customer = $customer;
+    }
+
+
 }
