@@ -2,6 +2,7 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Order;
 
+use Numiscorner\MarketplaceBundle\Model\Order\Cart\Item;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class Order
@@ -40,6 +41,7 @@ class Order
     /**
      * @Assert\NotBlank()
      * @Assert\Currency()
+     *
      * @var string
      */
     protected $currency;
@@ -95,7 +97,12 @@ class Order
     /** @var string */
     protected $sourceUrl;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Type("float")
+     *
+     * @var float
+     */
     protected $subtotalPrice;
 
     /** @var bool */
@@ -107,10 +114,20 @@ class Order
     /** @var string */
     protected $token;
 
-    /** @var float */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Type("float")
+     *
+     * @var float
+     */
     protected $totalDiscounts;
 
-    /** @var float */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Type("float")
+     *
+     * @var float
+     */
     protected $totalLineItemsPrice;
 
     /**
@@ -124,7 +141,12 @@ class Order
     /** @var float */
     protected $totalPriceUsd;
 
-    /** @var float */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Type("float")
+     *
+     * @var float
+     */
     protected $totalTax;
 
     /** @var int */
@@ -189,7 +211,7 @@ class Order
      */
     protected $lineItems;
 
-    /** @var array */
+    /** @var Item[] */
     protected $shippingLines;
 
     /**
@@ -216,6 +238,7 @@ class Order
     /**
      * @Assert\NotBlank()
      * @Assert\Valid()
+     *
      * @var Customer
      */
     protected $customer;

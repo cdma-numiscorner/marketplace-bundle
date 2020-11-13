@@ -1,6 +1,6 @@
 <?php
 
-namespace BoldApps\ShopifyToolkit\Models\Cart;
+namespace Numiscorner\MarketplaceBundle\Model\Order\Cart;
 
 class Cart
 {

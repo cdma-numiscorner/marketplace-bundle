@@ -2,6 +2,8 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Order;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Customer
 {
     /** @var int */
@@ -10,13 +12,25 @@ class Customer
     /** @var bool */
     protected $acceptsMarketing;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Email()
+     *
+     * @var string
+     */
     protected $email;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var string
+     */
     protected $firstName;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank
+     * @var string
+     */
     protected $lastName;
 
     /** @var int */
@@ -46,10 +60,18 @@ class Customer
     /** @var string */
     protected $lastOrderName;
 
-    /** @var $array */
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var CustomerAddress
+     */
     protected $defaultAddress;
 
-    /** @var $array */
+    /**
+     * @Assert\Valid()
+     *
+     * @var CustomerAddress[]
+     */
     protected $addresses;
 
     /** @var string */
@@ -193,6 +215,14 @@ class Customer
         return $this->defaultAddress;
     }
 
+    /**
+     * @param CustomerAddress $defaultAddress
+     */
+    public function setDefaultAddress(CustomerAddress $defaultAddress): void
+    {
+        $this->defaultAddress = $defaultAddress;
+    }
+    
     /**
      * @return array
      */

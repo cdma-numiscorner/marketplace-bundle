@@ -2,38 +2,58 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Order;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class CustomerAddress
 {
-
-
     /** @var int */
     protected $id;
 
     /** @var int */
     protected $customerId;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var string
+     */
     protected $firstName;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var string
+     */
     protected $lastName;
 
     /** @var string */
     protected $company;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var string
+     */
     protected $address1;
 
     /** @var string */
     protected $address2;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var string
+     */
     protected $city;
 
     /** @var string */
     protected $province;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var string
+     */
     protected $country;
 
     /** @var string */
@@ -48,7 +68,12 @@ class CustomerAddress
     /** @var string */
     protected $provinceCode;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Country()
+     *
+     * @var string
+     */
     protected $countryCode;
 
     /** @var string */

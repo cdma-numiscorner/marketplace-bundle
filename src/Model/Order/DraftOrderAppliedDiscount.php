@@ -4,8 +4,6 @@ namespace Numiscorner\MarketplaceBundle\Model\Order;
 
 class DraftOrderAppliedDiscount
 {
-
-
     /** @var string */
     protected $title;
 
