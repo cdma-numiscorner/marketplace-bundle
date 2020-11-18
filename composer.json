@@ -17,6 +17,6 @@
     "require": {
         "doctrine/collections": "^1.6",
       "ext-json": "*",
-        "symfony/validator": "^4.4"
+        "symfony/validator": ">=3.4"
     }
 }
