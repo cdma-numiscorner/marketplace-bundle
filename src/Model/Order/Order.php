@@ -112,10 +112,10 @@ class Order
      */
     protected $orderNumber;
 
-    /** @var array */
+    /** @var array|null */
     protected $discountCodes;
 
-    /** @var array */
+    /** @var array|null */
     protected $taxLines;
 
     /** @var mixed */

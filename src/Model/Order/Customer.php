@@ -70,7 +70,7 @@ class Customer
     /**
      * @Assert\Valid()
      *
-     * @var CustomerAddress[]
+     * @var CustomerAddress[]|null
      */
     protected $addresses;
 
