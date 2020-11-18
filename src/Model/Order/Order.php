@@ -24,7 +24,7 @@ class Order
      * @Assert\NotBlank()
      * @Assert\DateTime()
      *
-     * @var string
+     * @var \DateTimeInterface
      */
     protected $createdAt;
 
@@ -103,7 +103,7 @@ class Order
     /** @var int */
     protected $totalWeight;
 
-    /** @var string */
+    /** @var \DateTimeInterface */
     protected $updatedAt;
 
     /**
