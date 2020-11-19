@@ -165,6 +165,9 @@ class Order
     /** @var Transaction[]|null */
     protected $transactions;
 
+    /** @var bool */
+    protected $isRisky = false;
+
     /**
      * @return int
      */
@@ -584,5 +587,21 @@ class Order
     public function setTransactions($transactions)
     {
         $this->transactions = $transactions;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRisky()
+    {
+        return $this->isRisky;
+    }
+
+    /**
+     * @param bool $isRisky
+     */
+    public function setIsRisky($isRisky)
+    {
+        $this->isRisky = $isRisky;
     }
 }
