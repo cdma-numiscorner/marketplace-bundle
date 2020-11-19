@@ -2,9 +2,16 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Order;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Transaction
 {
-
+    const TYPE_PAYPAL = 'paypal';
+    const TYPE_CHECK = 'check';
+    const TYPE_TRANSFER = 'transfer';
+    const TYPE_CARD = 'card';
+    const TYPE_OTHER = 'other';
+    const TYPE_STRIPE = 'stripe';
 
     /** @var int */
     public $id;
@@ -12,16 +19,36 @@ class Transaction
     /** @var int */
     public $orderId;
 
-    /** @var float */
+    /**
+     * @Assert\NotBlank()
+     * @var float
+     */
     public $amount;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @var string
+     */
     public $kind;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Choice({
+     *     Transaction::TYPE_PAYPAL,
+     *     Transaction::TYPE_CHECK,
+     *     Transaction::TYPE_TRANSFER,
+     *     Transaction::TYPE_CARD,
+     *     Transaction::TYPE_OTHER,
+     *     Transaction::TYPE_STRIPE
+     * })
+     * @var string
+     */
     public $gateway;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @var string
+     */
     public $status;
 
     /** @var string */
@@ -36,7 +63,12 @@ class Transaction
     /** @var string */
     public $authorization;
 
-    /** @var string */
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Currency()
+     *
+     * @var string
+     */
     public $currency;
 
     /** @var int */
