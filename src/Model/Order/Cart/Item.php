@@ -85,6 +85,9 @@ class Item
     /** @var array */
     protected $variantOptions;
 
+    /** @var bool */
+    protected $isStorePickup = false;
+
     /**
      * @return int
      */
@@ -515,5 +518,21 @@ class Item
     public function setVariantOptions($variantOptions)
     {
         $this->variantOptions = $variantOptions;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isStorePickup()
+    {
+        return $this->isStorePickup;
+    }
+
+    /**
+     * @param bool $isStorePickup
+     */
+    public function setIsStorePickup($isStorePickup)
+    {
+        $this->isStorePickup = $isStorePickup;
     }
 }
