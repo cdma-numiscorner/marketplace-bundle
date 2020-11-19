@@ -165,9 +165,6 @@ class Order
     /** @var Transaction[]|null */
     protected $transactions;
 
-    /** @var bool */
-    protected $isStorePickup = false;
-
     /**
      * @return int
      */
@@ -587,21 +584,5 @@ class Order
     public function setTransactions($transactions)
     {
         $this->transactions = $transactions;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isStorePickup()
-    {
-        return $this->isStorePickup;
-    }
-
-    /**
-     * @param bool $isStorePickup
-     */
-    public function setIsStorePickup($isStorePickup)
-    {
-        $this->isStorePickup = $isStorePickup;
     }
 }
