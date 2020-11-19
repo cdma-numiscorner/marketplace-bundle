@@ -27,7 +27,7 @@ class Transaction
     /** @var string */
     public $message;
 
-    /** @var string */
+    /** @var \DateTimeInterface */
     public $createdAt;
 
     /** @var bool */

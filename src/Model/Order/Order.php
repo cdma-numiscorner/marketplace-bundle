@@ -129,6 +129,13 @@ class Order
      */
     protected $lineItems;
 
+    /**
+     * @Assert\Collection()
+     *
+     * @var LineItem[]|null
+     */
+    protected $services;
+
     /** @var Item[] */
     protected $shippingLines;
 
@@ -155,7 +162,7 @@ class Order
      */
     protected $customer;
 
-    /** @var string */
+    /** @var Transaction[]|null */
     protected $transactions;
 
     /**
@@ -542,5 +549,40 @@ class Order
         $this->customer = $customer;
     }
 
+    /**
+     * @return LineItem[]|null
+     */
+    public function getServices()
+    {
+        return $this->services;
+    }
 
+    public function addService($service)
+    {
+        array_push($this->services, $service);
+    }
+
+    /**
+     * @param LineItem[] $services
+     */
+    public function setServices($services)
+    {
+        $this->services = $services;
+    }
+
+    /**
+     * @return Transaction[]|null
+     */
+    public function getTransactions()
+    {
+        return $this->transactions;
+    }
+
+    /**
+     * @param Transaction[]|null $transactions
+     */
+    public function setTransactions($transactions)
+    {
+        $this->transactions = $transactions;
+    }
 }
