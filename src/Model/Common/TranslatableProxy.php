@@ -13,7 +13,7 @@ class TranslatableProxy
     protected $locale;
 
     /**
-     * @var ArrayCollection|KeyValueHolder[]
+     * @var ArrayCollection<KeyValueHolder>
      */
     protected $keyValues = [];
 

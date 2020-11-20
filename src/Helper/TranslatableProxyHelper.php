@@ -11,7 +11,7 @@ class TranslatableProxyHelper
     /**
      * Get a TranslatableProxy by locale
      *
-     * @param ArrayCollection|TranslatableProxy[] $translations
+     * @param ArrayCollection<TranslatableProxy> $translations
      * @param string $locale
      *
      * @return TranslatableProxy

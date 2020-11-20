@@ -32,17 +32,17 @@ class Product implements GenericModelInterface
     protected $taxCode;
 
     /**
-     * @var ArrayCollection|TranslatableProxy[]
+     * @var ArrayCollection<TranslatableProxy>
      */
     protected $features;
 
     /**
-     * @var ArrayCollection|TranslatableProxy[]
+     * @var ArrayCollection<TranslatableProxy>
      */
     protected $translations;
 
     /**
-     * @var ArrayCollection|TranslatableProxy[]
+     * @var ArrayCollection<TranslatableProxy>
      */
     protected $categories;
 
@@ -74,7 +74,7 @@ class Product implements GenericModelInterface
     /**
      * Hold association on marketPlace by category
      *
-     * @var ArrayCollection|KeyValueHolder
+     * @var ArrayCollection<KeyValueHolder>
      */
     protected $mappings;
 
@@ -287,7 +287,7 @@ class Product implements GenericModelInterface
     }
 
     /**
-     * @return ArrayCollection|KeyValueHolder
+     * @return ArrayCollection<KeyValueHolder>
      */
     public function getMappings()
     {
@@ -295,7 +295,7 @@ class Product implements GenericModelInterface
     }
 
     /**
-     * @param ArrayCollection|KeyValueHolder $mappings
+     * @param ArrayCollection<KeyValueHolder> $mappings
      */
     public function setMappings($mappings): void
     {
