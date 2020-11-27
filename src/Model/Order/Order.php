@@ -103,7 +103,7 @@ class Order
     /** @var int */
     protected $totalWeight;
 
-    /** @var \DateTimeInterface */
+    /** @var \DateTimeInterface|null */
     protected $updatedAt;
 
     /**
@@ -136,7 +136,7 @@ class Order
      */
     protected $services;
 
-    /** @var Item[] */
+    /** @var Item[]|null */
     protected $shippingLines;
 
     /**
