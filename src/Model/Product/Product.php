@@ -78,12 +78,21 @@ class Product implements GenericModelInterface
      */
     protected $mappings;
 
+    /**
+     * Hold association on marketPlace by category
+     *
+     * @var ArrayCollection<KeyValueHolder>
+     */
+    protected $extradatas;
+
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
         $this->translations = new ArrayCollection();
         $this->features = new ArrayCollection();
         $this->mappings = new ArrayCollection();
+        $this->extradatas = new ArrayCollection();
         $this->images = [];
         $this->setFeatured(false);
     }
@@ -310,5 +319,31 @@ class Product implements GenericModelInterface
     public function removeMapping(KeyValueHolder $mapping)
     {
         $this->mappings->removeElement($mapping);
+    }
+
+    /**
+     * @return ArrayCollection<KeyValueHolder>
+     */
+    public function getExtradatas(): ArrayCollection
+    {
+        return $this->extradatas;
+    }
+
+    /**
+     * @param ArrayCollection<KeyValueHolder> $extradatas
+     */
+    public function setExtradatas(ArrayCollection $extradatas): void
+    {
+        $this->extradatas = $extradatas;
+    }
+
+    public function addExtradata(KeyValueHolder $extradata)
+    {
+        $this->extradatas->add($extradata);
+    }
+
+    public function removeExtradata(KeyValueHolder $extradata)
+    {
+        $this->extradatas->removeElement($extradata);
     }
 }
