@@ -354,7 +354,7 @@ class Product implements GenericModelInterface
     /**
      * @return int
      */
-    public function getKm(): int
+    public function getKm(): ?int
     {
         return $this->km;
     }
@@ -362,7 +362,7 @@ class Product implements GenericModelInterface
     /**
      * @param int $km
      */
-    public function setKm(int $km): void
+    public function setKm(?int $km): void
     {
         $this->km = $km;
     }
