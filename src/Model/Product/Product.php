@@ -85,6 +85,10 @@ class Product implements GenericModelInterface
      */
     protected $extradatas;
 
+    /**
+     * @var integer $km
+     */
+    protected $km;
 
     public function __construct()
     {
@@ -346,4 +350,21 @@ class Product implements GenericModelInterface
     {
         $this->extradatas->removeElement($extradata);
     }
+
+    /**
+     * @return int
+     */
+    public function getKm(): int
+    {
+        return $this->km;
+    }
+
+    /**
+     * @param int $km
+     */
+    public function setKm(int $km): void
+    {
+        $this->km = $km;
+    }
+
 }
