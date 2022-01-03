@@ -86,7 +86,7 @@ class Product implements GenericModelInterface
     protected $extradatas;
 
     /**
-     * @var integer $km
+     * @var integer|null $km
      */
     protected $km;
 
@@ -360,7 +360,7 @@ class Product implements GenericModelInterface
     }
 
     /**
-     * @param int $km
+     * @param int|null $km
      */
     public function setKm(?int $km): void
     {
