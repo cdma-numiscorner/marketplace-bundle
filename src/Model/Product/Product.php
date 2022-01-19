@@ -32,17 +32,17 @@ class Product implements GenericModelInterface
     protected $taxCode;
 
     /**
-     * @var ArrayCollection<TranslatableProxy>
+     * @var TranslatableProxy[]
      */
     protected $features;
 
     /**
-     * @var ArrayCollection<TranslatableProxy>
+     * @var TranslatableProxy[]
      */
     protected $translations;
 
     /**
-     * @var ArrayCollection<TranslatableProxy>
+     * @var TranslatableProxy[]
      */
     protected $categories;
 
@@ -74,14 +74,14 @@ class Product implements GenericModelInterface
     /**
      * Hold association on marketPlace by category
      *
-     * @var ArrayCollection<KeyValueHolder>
+     * @var KeyValueHolder[]
      */
     protected $mappings;
 
     /**
      * Hold association on marketPlace by category
      *
-     * @var ArrayCollection<KeyValueHolder>
+     * @var KeyValueHolder[]
      */
     protected $extradatas;
 
