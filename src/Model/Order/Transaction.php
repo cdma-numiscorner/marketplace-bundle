@@ -12,6 +12,7 @@ class Transaction
     const TYPE_CARD = 'card';
     const TYPE_OTHER = 'other';
     const TYPE_STRIPE = 'stripe';
+    const TYPE_EBAY = 'ebay';
 
     /** @var int */
     public $id;
