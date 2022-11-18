@@ -132,6 +132,13 @@ class Order
     /**
      * @Assert\Collection()
      *
+     * @var NoteAttribute[]
+     */
+    protected $noteAttributes;
+
+    /**
+     * @Assert\Collection()
+     *
      * @var LineItem[]|null
      */
     protected $services;
@@ -603,5 +610,26 @@ class Order
     public function setIsRisky($isRisky)
     {
         $this->isRisky = $isRisky;
+    }
+
+    /**
+     * @return NoteAttribute[]|null
+     */
+    public function getNoteAttributes()
+    {
+        return $this->noteAttributes;
+    }
+
+    public function addNoteAttribute($noteAttribute)
+    {
+        array_push($this->noteAttributes, $noteAttribute);
+    }
+
+    /**
+     * @param NoteAttribute[] $noteAttributes
+     */
+    public function setNoteAttributes($noteAttributes)
+    {
+        $this->noteAttributes = $noteAttributes;
     }
 }
