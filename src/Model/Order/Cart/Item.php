@@ -86,7 +86,7 @@ class Item
     protected $variantOptions;
 
     /** @var bool */
-    protected $isStorePickup = false;
+    protected $storePickup = false;
 
     /**
      * @return int
@@ -525,14 +525,14 @@ class Item
      */
     public function isStorePickup()
     {
-        return $this->isStorePickup;
+        return $this->storePickup;
     }
 
     /**
-     * @param bool $isStorePickup
+     * @param bool $storePickup
      */
-    public function setIsStorePickup($isStorePickup)
+    public function setStorePickup($storePickup)
     {
-        $this->isStorePickup = $isStorePickup;
+        $this->storePickup = $storePickup;
     }
 }
