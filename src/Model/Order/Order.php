@@ -130,9 +130,7 @@ class Order
     protected $lineItems;
 
     /**
-     * @Assert\Collection()
-     *
-     * @var NoteAttribute[]
+     * @var NoteAttribute[]|null
      */
     protected $noteAttributes;
 
