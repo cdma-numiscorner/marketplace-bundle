@@ -13,6 +13,8 @@ class Transaction
     const TYPE_OTHER = 'other';
     const TYPE_STRIPE = 'stripe';
     const TYPE_EBAY = 'ebay';
+    const TYPE_ALLEGRO = 'allegro';
+    const TYPE_ETSY = 'etsy';
 
     /** @var int */
     public $id;
