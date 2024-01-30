@@ -58,7 +58,6 @@ class Order
     protected $note;
 
     /**
-     * @Assert\NotBlank()
      * @Assert\Type("float")
      *
      * @var float
@@ -66,7 +65,6 @@ class Order
     protected $subtotalPrice;
 
     /**
-     * @Assert\NotBlank()
      *
      * @var PriceSet
      */
@@ -84,7 +82,6 @@ class Order
     protected $totalDiscounts;
 
     /**
-     * @Assert\NotBlank()
      *
      * @var PriceSet
      */
@@ -99,7 +96,6 @@ class Order
     protected $totalLineItemsPrice;
 
     /**
-     * @Assert\NotBlank()
      *
      * @var PriceSet
      */
@@ -114,7 +110,6 @@ class Order
     protected $totalPrice;
 
     /**
-     * @Assert\NotBlank()
      *
      * @var PriceSet
      */
@@ -129,7 +124,6 @@ class Order
     protected $totalTax;
 
     /**
-     * @Assert\NotBlank()
      *
      * @var PriceSet
      */

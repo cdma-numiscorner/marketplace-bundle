@@ -69,7 +69,6 @@ class LineItem
 
     /**
      *
-     * @Assert\NotBlank()
      * @var PriceSet
      */
     protected $priceSet;

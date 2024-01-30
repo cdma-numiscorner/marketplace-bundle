@@ -17,7 +17,6 @@ class TaxLine
 
     /**
      *
-     * @Assert\NotBlank()
      * @var PriceSet
      */
     protected $priceSet;
