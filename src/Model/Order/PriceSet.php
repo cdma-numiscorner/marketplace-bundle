@@ -16,6 +16,12 @@ class PriceSet
      */
     protected $presentmentMoney;
 
+    public function __construct($shopMoney = null, $presentmentMoney = null)
+    {
+        $this->shopMoney = $shopMoney;
+        $this->presentmentMoney = $presentmentMoney;
+    }
+
     /**
      * @return Amount
      */

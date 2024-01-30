@@ -15,6 +15,13 @@ class Amount
      */
     protected $currency_code;
 
+    public function __construct($amount = null, $currency_code = null)
+    {
+        $this->amount = $amount;
+        $this->currency_code =$currency_code;
+    }
+
+
     /**
      * @return float
      */
