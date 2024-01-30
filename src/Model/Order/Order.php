@@ -65,6 +65,13 @@ class Order
      */
     protected $subtotalPrice;
 
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var PriceSet
+     */
+    protected $subtotalPriceSet;
+
     /** @var bool */
     protected $taxesIncluded;
 
@@ -78,11 +85,25 @@ class Order
 
     /**
      * @Assert\NotBlank()
+     *
+     * @var PriceSet
+     */
+    protected $totalDiscountsSet;
+
+    /**
+     * @Assert\NotBlank()
      * @Assert\Type("float")
      *
      * @var float
      */
     protected $totalLineItemsPrice;
+
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var PriceSet
+     */
+    protected $totalLineItemsPriceSet;
 
     /**
      * @Assert\NotBlank()
@@ -94,11 +115,25 @@ class Order
 
     /**
      * @Assert\NotBlank()
+     *
+     * @var PriceSet
+     */
+    protected $totalPriceSet;
+
+    /**
+     * @Assert\NotBlank()
      * @Assert\Type("float")
      *
      * @var float
      */
     protected $totalTax;
+
+    /**
+     * @Assert\NotBlank()
+     *
+     * @var PriceSet
+     */
+    protected $totalTaxSet;
 
     /** @var int */
     protected $totalWeight;
@@ -629,5 +664,55 @@ class Order
     public function setNoteAttributes($noteAttributes)
     {
         $this->noteAttributes = $noteAttributes;
+    }
+
+    public function getSubtotalPriceSet(): PriceSet
+    {
+        return $this->subtotalPriceSet;
+    }
+
+    public function setSubtotalPriceSet(PriceSet $subtotalPriceSet): void
+    {
+        $this->subtotalPriceSet = $subtotalPriceSet;
+    }
+
+    public function getTotalDiscountsSet(): PriceSet
+    {
+        return $this->totalDiscountsSet;
+    }
+
+    public function setTotalDiscountsSet(PriceSet $totalDiscountsSet): void
+    {
+        $this->totalDiscountsSet = $totalDiscountsSet;
+    }
+
+    public function getTotalLineItemsPriceSet(): PriceSet
+    {
+        return $this->totalLineItemsPriceSet;
+    }
+
+    public function setTotalLineItemsPriceSet(PriceSet $totalLineItemsPriceSet): void
+    {
+        $this->totalLineItemsPriceSet = $totalLineItemsPriceSet;
+    }
+
+    public function getTotalPriceSet(): PriceSet
+    {
+        return $this->totalPriceSet;
+    }
+
+    public function setTotalPriceSet(PriceSet $totalPriceSet): void
+    {
+        $this->totalPriceSet = $totalPriceSet;
+    }
+
+    public function getTotalTaxSet(): PriceSet
+    {
+        return $this->totalTaxSet;
+    }
+
+    public function setTotalTaxSet(PriceSet $totalTaxSet): void
+    {
+        $this->totalTaxSet = $totalTaxSet;
     }
 }

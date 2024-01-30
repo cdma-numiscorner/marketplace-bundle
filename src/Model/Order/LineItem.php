@@ -68,6 +68,13 @@ class LineItem
     protected $platformVariant;
 
     /**
+     *
+     * @Assert\NotBlank()
+     * @var PriceSet
+     */
+    protected $priceSet;
+
+    /**
      * @return string
      */
     public function getTitle()
@@ -305,5 +312,21 @@ class LineItem
     public function setPlatformVariant($platformVariant)
     {
         $this->platformVariant = $platformVariant;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getPriceSet(): PriceSet
+    {
+        return $this->priceSet;
+    }
+
+    /**
+     * @param PriceSet $priceSet
+     */
+    public function setPriceSet(PriceSet $priceSet): void
+    {
+        $this->priceSet = $priceSet;
     }
 }

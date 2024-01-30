@@ -16,6 +16,13 @@ class TaxLine
     protected $rate;
 
     /**
+     *
+     * @Assert\NotBlank()
+     * @var PriceSet
+     */
+    protected $priceSet;
+
+    /**
      * @return string
      */
     public function getTitle()
@@ -37,5 +44,21 @@ class TaxLine
     public function getRate()
     {
         return $this->rate;
+    }
+
+    /**
+     * @return PriceSet
+     */
+    public function getPriceSet(): PriceSet
+    {
+        return $this->priceSet;
+    }
+
+    /**
+     * @param PriceSet $priceSet
+     */
+    public function setPriceSet(PriceSet $priceSet): void
+    {
+        $this->priceSet = $priceSet;
     }
 }

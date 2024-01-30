@@ -2,6 +2,8 @@
 
 namespace Numiscorner\MarketplaceBundle\Model\Order\Cart;
 
+use Numiscorner\MarketplaceBundle\Model\Order\PriceSet;
+
 class Item
 {
     /** @var int */
@@ -25,20 +27,52 @@ class Item
     /** @var int */
     protected $price;
 
+    /**
+     *
+     * @var PriceSet
+     */
+    protected $priceSet;
+
     /** @var int */
     protected $originalPrice;
+
+    /**
+     *
+     * @var PriceSet
+     */
+    protected $originalPriceSet;
+
 
     /** @var int */
     protected $discountedPrice;
 
+    /**
+     *
+     * @var PriceSet
+     */
+    protected $discountedPriceSet;
+
     /** @var int */
     protected $linePrice;
+
+    /**
+     *
+     * @var PriceSet
+     */
+    protected $linePriceSet;
 
     /** @var int */
     protected $originalLinePrice;
 
+    /** @var PriceSet */
+    protected $originalLinePriceSet;
+
+
     /** @var int */
     protected $totalDiscount;
+
+    /** @var PriceSet */
+    protected $totalDiscountSet;
 
     /** @var array */
     protected $discounts;
@@ -534,5 +568,65 @@ class Item
     public function setStorePickup($storePickup)
     {
         $this->storePickup = $storePickup;
+    }
+
+    public function getPriceSet(): PriceSet
+    {
+        return $this->priceSet;
+    }
+
+    public function setPriceSet(PriceSet $priceSet): void
+    {
+        $this->priceSet = $priceSet;
+    }
+
+    public function getOriginalPriceSet(): PriceSet
+    {
+        return $this->originalPriceSet;
+    }
+
+    public function setOriginalPriceSet(PriceSet $originalPriceSet): void
+    {
+        $this->originalPriceSet = $originalPriceSet;
+    }
+
+    public function getDiscountedPriceSet(): PriceSet
+    {
+        return $this->discountedPriceSet;
+    }
+
+    public function setDiscountedPriceSet(PriceSet $discountedPriceSet): void
+    {
+        $this->discountedPriceSet = $discountedPriceSet;
+    }
+
+    public function getLinePriceSet(): PriceSet
+    {
+        return $this->linePriceSet;
+    }
+
+    public function setLinePriceSet(PriceSet $linePriceSet): void
+    {
+        $this->linePriceSet = $linePriceSet;
+    }
+
+    public function getOriginalLinePriceSet(): PriceSet
+    {
+        return $this->originalLinePriceSet;
+    }
+
+    public function setOriginalLinePriceSet(PriceSet $originalLinePriceSet): void
+    {
+        $this->originalLinePriceSet = $originalLinePriceSet;
+    }
+
+    public function getTotalDiscountSet(): PriceSet
+    {
+        return $this->totalDiscountSet;
+    }
+
+    public function setTotalDiscountSet(PriceSet $totalDiscountSet): void
+    {
+        $this->totalDiscountSet = $totalDiscountSet;
     }
 }
