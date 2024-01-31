@@ -316,7 +316,7 @@ class LineItem
     /**
      * @return PriceSet
      */
-    public function getPriceSet(): PriceSet
+    public function getPriceSet(): ?PriceSet
     {
         return $this->priceSet;
     }

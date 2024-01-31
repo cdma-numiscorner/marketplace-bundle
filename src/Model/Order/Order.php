@@ -660,7 +660,7 @@ class Order
         $this->noteAttributes = $noteAttributes;
     }
 
-    public function getSubtotalPriceSet(): PriceSet
+    public function getSubtotalPriceSet(): ?PriceSet
     {
         return $this->subtotalPriceSet;
     }
@@ -670,7 +670,7 @@ class Order
         $this->subtotalPriceSet = $subtotalPriceSet;
     }
 
-    public function getTotalDiscountsSet(): PriceSet
+    public function getTotalDiscountsSet(): ?PriceSet
     {
         return $this->totalDiscountsSet;
     }
@@ -680,7 +680,7 @@ class Order
         $this->totalDiscountsSet = $totalDiscountsSet;
     }
 
-    public function getTotalLineItemsPriceSet(): PriceSet
+    public function getTotalLineItemsPriceSet(): ?PriceSet
     {
         return $this->totalLineItemsPriceSet;
     }
@@ -690,7 +690,7 @@ class Order
         $this->totalLineItemsPriceSet = $totalLineItemsPriceSet;
     }
 
-    public function getTotalPriceSet(): PriceSet
+    public function getTotalPriceSet(): ?PriceSet
     {
         return $this->totalPriceSet;
     }
@@ -700,7 +700,7 @@ class Order
         $this->totalPriceSet = $totalPriceSet;
     }
 
-    public function getTotalTaxSet(): PriceSet
+    public function getTotalTaxSet(): ?PriceSet
     {
         return $this->totalTaxSet;
     }

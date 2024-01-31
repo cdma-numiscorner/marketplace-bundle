@@ -570,7 +570,7 @@ class Item
         $this->storePickup = $storePickup;
     }
 
-    public function getPriceSet(): PriceSet
+    public function getPriceSet(): ?PriceSet
     {
         return $this->priceSet;
     }
@@ -580,7 +580,7 @@ class Item
         $this->priceSet = $priceSet;
     }
 
-    public function getOriginalPriceSet(): PriceSet
+    public function getOriginalPriceSet(): ?PriceSet
     {
         return $this->originalPriceSet;
     }
@@ -590,7 +590,7 @@ class Item
         $this->originalPriceSet = $originalPriceSet;
     }
 
-    public function getDiscountedPriceSet(): PriceSet
+    public function getDiscountedPriceSet(): ?PriceSet
     {
         return $this->discountedPriceSet;
     }
@@ -600,7 +600,7 @@ class Item
         $this->discountedPriceSet = $discountedPriceSet;
     }
 
-    public function getLinePriceSet(): PriceSet
+    public function getLinePriceSet(): ?PriceSet
     {
         return $this->linePriceSet;
     }
@@ -610,7 +610,7 @@ class Item
         $this->linePriceSet = $linePriceSet;
     }
 
-    public function getOriginalLinePriceSet(): PriceSet
+    public function getOriginalLinePriceSet(): ?PriceSet
     {
         return $this->originalLinePriceSet;
     }
@@ -620,7 +620,7 @@ class Item
         $this->originalLinePriceSet = $originalLinePriceSet;
     }
 
-    public function getTotalDiscountSet(): PriceSet
+    public function getTotalDiscountSet(): ?PriceSet
     {
         return $this->totalDiscountSet;
     }
