@@ -69,7 +69,7 @@ class LineItem
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $priceSet;
 

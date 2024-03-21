@@ -29,7 +29,7 @@ class Item
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $priceSet;
 
@@ -38,7 +38,7 @@ class Item
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $originalPriceSet;
 
@@ -48,7 +48,7 @@ class Item
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $discountedPriceSet;
 
@@ -57,21 +57,21 @@ class Item
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $linePriceSet;
 
     /** @var int */
     protected $originalLinePrice;
 
-    /** @var PriceSet */
+    /** @var PriceSet|null */
     protected $originalLinePriceSet;
 
 
     /** @var int */
     protected $totalDiscount;
 
-    /** @var PriceSet */
+    /** @var PriceSet|null */
     protected $totalDiscountSet;
 
     /** @var array */

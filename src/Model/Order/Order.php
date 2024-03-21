@@ -66,7 +66,7 @@ class Order
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $subtotalPriceSet;
 
@@ -83,7 +83,7 @@ class Order
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $totalDiscountsSet;
 
@@ -97,7 +97,7 @@ class Order
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $totalLineItemsPriceSet;
 
@@ -111,7 +111,7 @@ class Order
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $totalPriceSet;
 
@@ -125,7 +125,7 @@ class Order
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $totalTaxSet;
 
