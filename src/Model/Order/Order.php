@@ -665,7 +665,7 @@ class Order
         return $this->subtotalPriceSet;
     }
 
-    public function setSubtotalPriceSet(PriceSet $subtotalPriceSet): void
+    public function setSubtotalPriceSet(?PriceSet $subtotalPriceSet): void
     {
         $this->subtotalPriceSet = $subtotalPriceSet;
     }
@@ -675,7 +675,7 @@ class Order
         return $this->totalDiscountsSet;
     }
 
-    public function setTotalDiscountsSet(PriceSet $totalDiscountsSet): void
+    public function setTotalDiscountsSet(?PriceSet $totalDiscountsSet): void
     {
         $this->totalDiscountsSet = $totalDiscountsSet;
     }
@@ -685,7 +685,7 @@ class Order
         return $this->totalLineItemsPriceSet;
     }
 
-    public function setTotalLineItemsPriceSet(PriceSet $totalLineItemsPriceSet): void
+    public function setTotalLineItemsPriceSet(?PriceSet $totalLineItemsPriceSet): void
     {
         $this->totalLineItemsPriceSet = $totalLineItemsPriceSet;
     }
@@ -695,7 +695,7 @@ class Order
         return $this->totalPriceSet;
     }
 
-    public function setTotalPriceSet(PriceSet $totalPriceSet): void
+    public function setTotalPriceSet(?PriceSet $totalPriceSet): void
     {
         $this->totalPriceSet = $totalPriceSet;
     }
@@ -705,7 +705,7 @@ class Order
         return $this->totalTaxSet;
     }
 
-    public function setTotalTaxSet(PriceSet $totalTaxSet): void
+    public function setTotalTaxSet(?PriceSet $totalTaxSet): void
     {
         $this->totalTaxSet = $totalTaxSet;
     }

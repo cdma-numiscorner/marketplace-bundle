@@ -324,7 +324,7 @@ class LineItem
     /**
      * @param PriceSet $priceSet
      */
-    public function setPriceSet(PriceSet $priceSet): void
+    public function setPriceSet(?PriceSet $priceSet): void
     {
         $this->priceSet = $priceSet;
     }

@@ -575,7 +575,7 @@ class Item
         return $this->priceSet;
     }
 
-    public function setPriceSet(PriceSet $priceSet): void
+    public function setPriceSet(?PriceSet $priceSet): void
     {
         $this->priceSet = $priceSet;
     }
@@ -585,7 +585,7 @@ class Item
         return $this->originalPriceSet;
     }
 
-    public function setOriginalPriceSet(PriceSet $originalPriceSet): void
+    public function setOriginalPriceSet(?PriceSet $originalPriceSet): void
     {
         $this->originalPriceSet = $originalPriceSet;
     }
@@ -595,7 +595,7 @@ class Item
         return $this->discountedPriceSet;
     }
 
-    public function setDiscountedPriceSet(PriceSet $discountedPriceSet): void
+    public function setDiscountedPriceSet(?PriceSet $discountedPriceSet): void
     {
         $this->discountedPriceSet = $discountedPriceSet;
     }
@@ -605,7 +605,7 @@ class Item
         return $this->linePriceSet;
     }
 
-    public function setLinePriceSet(PriceSet $linePriceSet): void
+    public function setLinePriceSet(?PriceSet $linePriceSet): void
     {
         $this->linePriceSet = $linePriceSet;
     }
@@ -615,7 +615,7 @@ class Item
         return $this->originalLinePriceSet;
     }
 
-    public function setOriginalLinePriceSet(PriceSet $originalLinePriceSet): void
+    public function setOriginalLinePriceSet(?PriceSet $originalLinePriceSet): void
     {
         $this->originalLinePriceSet = $originalLinePriceSet;
     }
@@ -625,7 +625,7 @@ class Item
         return $this->totalDiscountSet;
     }
 
-    public function setTotalDiscountSet(PriceSet $totalDiscountSet): void
+    public function setTotalDiscountSet(?PriceSet $totalDiscountSet): void
     {
         $this->totalDiscountSet = $totalDiscountSet;
     }

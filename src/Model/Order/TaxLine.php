@@ -17,7 +17,7 @@ class TaxLine
 
     /**
      *
-     * @var PriceSet
+     * @var PriceSet|null
      */
     protected $priceSet;
 
@@ -56,7 +56,7 @@ class TaxLine
     /**
      * @param PriceSet $priceSet
      */
-    public function setPriceSet(PriceSet $priceSet): void
+    public function setPriceSet(?PriceSet $priceSet): void
     {
         $this->priceSet = $priceSet;
     }
