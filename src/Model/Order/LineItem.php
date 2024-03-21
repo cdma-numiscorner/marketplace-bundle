@@ -38,14 +38,6 @@ class LineItem
      */
     protected $quantity;
 
-    /**
-     * @Assert\NotBlank()
-     * @Assert\Type("float")
-     *
-     * @var int
-     */
-    protected $price;
-
     /* @var bool */
     protected $visible;
 
@@ -183,22 +175,6 @@ class LineItem
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param int $price
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
     }
 
     /**

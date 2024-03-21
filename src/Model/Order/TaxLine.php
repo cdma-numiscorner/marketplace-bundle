@@ -9,9 +9,6 @@ class TaxLine
     /** @var string */
     protected $title;
 
-    /** @var string */
-    protected $price;
-
     /** @var float */
     protected $rate;
 
@@ -27,14 +24,6 @@ class TaxLine
     public function getTitle()
     {
         return $this->title;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPrice()
-    {
-        return $this->price;
     }
 
     /**

@@ -58,13 +58,6 @@ class Order
     protected $note;
 
     /**
-     * @Assert\Type("float")
-     *
-     * @var float
-     */
-    protected $subtotalPrice;
-
-    /**
      *
      * @var PriceSet|null
      */
@@ -74,26 +67,10 @@ class Order
     protected $taxesIncluded;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Type("float")
-     *
-     * @var float
-     */
-    protected $totalDiscounts;
-
-    /**
      *
      * @var PriceSet|null
      */
     protected $totalDiscountsSet;
-
-    /**
-     * @Assert\NotBlank()
-     * @Assert\Type("float")
-     *
-     * @var float
-     */
-    protected $totalLineItemsPrice;
 
     /**
      *
@@ -102,26 +79,10 @@ class Order
     protected $totalLineItemsPriceSet;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Type("float")
-     *
-     * @var float
-     */
-    protected $totalPrice;
-
-    /**
      *
      * @var PriceSet|null
      */
     protected $totalPriceSet;
-
-    /**
-     * @Assert\NotBlank()
-     * @Assert\Type("float")
-     *
-     * @var float
-     */
-    protected $totalTax;
 
     /**
      *
@@ -347,22 +308,6 @@ class Order
     }
 
     /**
-     * @return float
-     */
-    public function getSubtotalPrice()
-    {
-        return $this->subtotalPrice;
-    }
-
-    /**
-     * @param float $subtotalPrice
-     */
-    public function setSubtotalPrice($subtotalPrice)
-    {
-        $this->subtotalPrice = $subtotalPrice;
-    }
-
-    /**
      * @return bool
      */
     public function isTaxesIncluded()
@@ -376,70 +321,6 @@ class Order
     public function setTaxesIncluded($taxesIncluded)
     {
         $this->taxesIncluded = $taxesIncluded;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalDiscounts()
-    {
-        return $this->totalDiscounts;
-    }
-
-    /**
-     * @param float $totalDiscounts
-     */
-    public function setTotalDiscounts($totalDiscounts)
-    {
-        $this->totalDiscounts = $totalDiscounts;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalLineItemsPrice()
-    {
-        return $this->totalLineItemsPrice;
-    }
-
-    /**
-     * @param float $totalLineItemsPrice
-     */
-    public function setTotalLineItemsPrice($totalLineItemsPrice)
-    {
-        $this->totalLineItemsPrice = $totalLineItemsPrice;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalPrice()
-    {
-        return $this->totalPrice;
-    }
-
-    /**
-     * @param float $totalPrice
-     */
-    public function setTotalPrice($totalPrice)
-    {
-        $this->totalPrice = $totalPrice;
-    }
-
-    /**
-     * @return float
-     */
-    public function getTotalTax()
-    {
-        return $this->totalTax;
-    }
-
-    /**
-     * @param float $totalTax
-     */
-    public function setTotalTax($totalTax)
-    {
-        $this->totalTax = $totalTax;
     }
 
     /**

@@ -24,17 +24,11 @@ class Item
     /** @var string */
     protected $title;
 
-    /** @var int */
-    protected $price;
-
     /**
      *
      * @var PriceSet|null
      */
     protected $priceSet;
-
-    /** @var int */
-    protected $originalPrice;
 
     /**
      *
@@ -42,18 +36,11 @@ class Item
      */
     protected $originalPriceSet;
 
-
-    /** @var int */
-    protected $discountedPrice;
-
     /**
      *
      * @var PriceSet|null
      */
     protected $discountedPriceSet;
-
-    /** @var int */
-    protected $linePrice;
 
     /**
      *
@@ -61,15 +48,8 @@ class Item
      */
     protected $linePriceSet;
 
-    /** @var int */
-    protected $originalLinePrice;
-
     /** @var PriceSet|null */
     protected $originalLinePriceSet;
-
-
-    /** @var int */
-    protected $totalDiscount;
 
     /** @var PriceSet|null */
     protected $totalDiscountSet;
@@ -216,118 +196,6 @@ class Item
     public function setTitle($title)
     {
         $this->title = $title;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param int $price
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-    }
-
-    /**
-     * @return int
-     */
-    public function getOriginalPrice()
-    {
-        return $this->originalPrice;
-    }
-
-    /**
-     * @param $originalPrice
-     */
-    public function setOriginalPrice($originalPrice)
-    {
-        $this->originalPrice = $originalPrice;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountedPrice()
-    {
-        return $this->discountedPrice;
-    }
-
-    /**
-     * @param $discountedPrice
-     */
-    public function setDiscountedPrice($discountedPrice)
-    {
-        $this->discountedPrice = $discountedPrice;
-    }
-
-    /**
-     * @return int
-     */
-    public function getLinePrice()
-    {
-        return $this->linePrice;
-    }
-
-    /**
-     * @param $linePrice
-     */
-    public function setLinePrice($linePrice)
-    {
-        $this->linePrice = $linePrice;
-    }
-
-    /**
-     * @return int
-     */
-    public function getOriginalLinePrice()
-    {
-        return $this->originalLinePrice;
-    }
-
-    /**
-     * @param $originalLinePrice
-     */
-    public function setOriginalLinePrice($originalLinePrice)
-    {
-        $this->originalLinePrice = $originalLinePrice;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTotalDiscount()
-    {
-        return $this->totalDiscount;
-    }
-
-    /**
-     * @param $totalDiscount
-     */
-    public function setTotalDiscount($totalDiscount)
-    {
-        $this->totalDiscount = $totalDiscount;
-    }
-
-    /**
-     * @return array
-     */
-    public function getDiscounts()
-    {
-        return $this->discounts;
-    }
-
-    /**
-     * @param array $discounts
-     */
-    public function setDiscounts($discounts)
-    {
-        $this->discounts = $discounts;
     }
 
     /**
