@@ -339,7 +339,7 @@ class Transaction
     }
 
     /**
-     * @return mixed
+     * @return Receipt
      */
     public function getReceipt()
     {
@@ -347,7 +347,7 @@ class Transaction
     }
 
     /**
-     * @param mixed $receipt
+     * @param Receipt $receipt
      */
     public function setReceipt($receipt)
     {
